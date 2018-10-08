@@ -10,6 +10,8 @@ local context_menu = textadept.menu.context_menu
 context_menu[#context_menu + 1] = {"Reset", reset}
 --context_menu[#context_menu + 1] = {"Print", function() ui.print("Hello textadept") end}
 
+_M.spellcheck = require('spellcheck')
+
 -- View mode
 args.register('-vm', '--view-mode', 0, function()
   -- Make all opened buffers read-only.
