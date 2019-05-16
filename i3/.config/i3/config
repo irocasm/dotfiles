@@ -249,12 +249,13 @@ bindsym $mod+Home mode "$mode_system"
 bindsym $mod+l exec --no-startup-id $Locker
 
 # Manual management of external displays
-set $mode_display Ext Screen (2) Second Monitor (h) HDMI
+set $mode_display Ext Screen (2) Second Monitor (h) HDMI (m) mirror
 mode "$mode_display" {
-	bindsym 2 exec --no-startup-id xrandr --output DP-2-2 --auto --right-of eDP-1, mode "default"
+	bindsym 2 exec --no-startup-id xrandr --output DP-2-1 --auto --left-of eDP-1 --output DP-2-2 --auto --left-of DP-2-1, mode "default"
 	bindsym h exec --no-startup-id xrandr --output HDMI-2 --auto --right-of eDP-1, mode "default"
+	bindsym m exec --no-startup-id xrandr --output HDMI-2 --auto --same-as eDP-1, mode "default"
 
-	bindsym Shift+2 exec --no-startup-id xrandr --output DP-2-2 --auto --off, mode "default"
+	bindsym Shift+2 exec --no-startup-id xrandr --output DP-2-2 --auto --off --output DP-2-1 --auto --off, mode "default"
 	bindsym Shift+h exec --no-startup-id xrandr --output HDMI-2 --auto --off, mode "default"
 
 	bindsym Return mode "default"
@@ -265,4 +266,4 @@ bindsym $mod+End mode "$mode_display"
 
 # run commands
 exec --no-startup-id numlockx on
-exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/Wood.jpg
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/leaf.jpg

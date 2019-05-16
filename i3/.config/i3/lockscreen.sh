@@ -2,11 +2,13 @@
 
 
 
-scrot /tmp/screen.png
-convert /tmp/screen.png -filter Gaussian -resize 10% -define filter:sigma=1 -resize 1000% /tmp/screen.png
+#scrot /tmp/screen.png
+#convert /tmp/screen.png -filter Gaussian -resize 10% -define filter:sigma=1 -resize 1000% /tmp/screen.png
 #convert /tmp/screen.png -scale 10% -scale 1000% /tmp/screen.png
+#cp ~/.config/wallpaper/winter-willow.png /tmp/screen.png
+cp ~/.config/wallpaper/skyline_hm.png /tmp/screen.png
 
-if [[ -f ~/.config/i3/lock.png ]]
+if [[ -f ~/.config/i3/lock.png ]] && false
 then
     # placement x/y
     PX=0
