@@ -23,6 +23,9 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Float Thunderbird windows by default
+for_window [class="(?i)thunderbird"] floating enable
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 # start file manager
