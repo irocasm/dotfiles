@@ -6,8 +6,9 @@
 #convert /tmp/screen.png -filter Gaussian -resize 10% -define filter:sigma=1 -resize 1000% /tmp/screen.png
 #convert /tmp/screen.png -scale 10% -scale 1000% /tmp/screen.png
 #cp ~/.config/wallpaper/winter-willow.png /tmp/screen.png
-cp ~/.config/wallpaper/skyline_hm.png /tmp/screen.png
 
+
+cp ~/.config/wallpaper/skyline_hm.png /tmp/screen.png
 if [[ -f ~/.config/i3/lock.png ]] && false
 then
     # placement x/y
@@ -34,4 +35,4 @@ then
     done
 fi
 i3lock -e -f -c 000000 -i /tmp/screen.png && sleep 1
-rm -f /tmp/screen.png
+#rm -f /tmp/screen.png
